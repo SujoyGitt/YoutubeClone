@@ -1,0 +1,46 @@
+.mainsidebar {
+  z-index: 2;
+}
+.sidebar {
+  height: 90vh;
+  ul li {
+    margin-top: 2rem;
+    font-size: 10px;
+    padding-right: 28px;
+    cursor: pointer;
+    width: 100%;
+  }
+  ul li:nth-child(1) {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    height: 48px;
+    ul li {
+      margin-top: 0rem;
+    }
+  }
+}
+
+.togglesideparent {
+  .togglesidebar {
+    transition: 3s;
+    transition-delay: 4s;
+  }
+  background: rgba(0, 0, 0, 0.438);
+  .sidebar-hidden {
+    transform: translateX(-100%);
+  }
+  .sidebar-visible {
+    transform: translateX(0%);
+  }
+
+  hr {
+    height: 1px;
+  }
+  li {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,8 @@
+export const Loginsucces = "Login_success"
+export const Loginfail = "Login_fail"
+export const LoginRequest = "Login_Request"
+export const Logout = "Logout"
+export const Loadprofile = "Loadprofile"
+export const HOME_VIDEOS_SUCCESS = "HOME_VIDEOS_SUCCESS"
+export const HOME_VIDEOS_FAIL = "HOME_VIDEOS_FAIL"
+export const HOME_VIDEOS_REQUEST = "HOME_VIDEOS_REQUEST"

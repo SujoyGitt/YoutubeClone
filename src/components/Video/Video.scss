@@ -1,0 +1,25 @@
+.video{
+  width: 350px;
+  .videodetails{
+    .channelname svg{
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .videologotitle  .channellogo{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+@media (max-width:786px) {
+  .video{
+    width: 280px;
+  }
+}
+@media (max-width:576px) {
+  .video{
+    width: 95%;
+  }
+}

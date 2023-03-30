@@ -1,0 +1,71 @@
+import React, { useEffect, useState } from "react";
+import "./Category.scss";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+const keywords = [
+  "All",
+  "React js",
+  "javascript",
+  "use of API",
+  "Songs",
+  "coding",
+  "Art",
+  "Guiter",
+  "News",
+  "Technology",
+  "Entertainment",
+  "Motivation",
+  "fitness",
+  "Helth",
+];
+export const Category = () => {
+  const [activeelement, setactiveelement] = useState("All");
+  const handleclick = (value) => {
+    setactiveelement(value);
+  };
+  useEffect(() => {
+    var carousel = document.querySelector(".Category");
+    var h = false;
+    let k;
+    let pp;
+
+    carousel.addEventListener("mousedown", function (e) {
+      h = true;
+      k = e.pageX;
+      pp = carousel.scrollLeft;
+      
+    });
+    // ====
+
+    carousel.addEventListener("mousemove", function (e) {
+      e.preventDefault();
+      if (!h) return;
+      carousel.scrollLeft = pp - (e.pageX - k);
+    });
+    // ====
+    carousel.addEventListener("mouseup", function () {
+      h = false;
+    });
+  });
+  return (
+    <div className="Categoryparent w-full flex justify-around items-center">
+      <div className="Category w-11/12">
+        {keywords.map((value, index) => {
+          return (
+            <>
+              <span
+                className={activeelement === value ? "active" : ""}
+                key={index}
+                onClick={() => handleclick(value)}
+              >
+                {value}
+              </span>
+            </>
+          );
+        })}
+      </div>
+      <div className="rightarrow w-1/12 cursor-pointer text-center">
+        <ArrowForwardIosIcon />
+      </div>
+    </div>
+  );
+};
