@@ -7,7 +7,7 @@
 --border-color: #cccccc;
 }
 .header {
-  z-index: 2;
+  z-index: 3;
 .logo{
   width: 110px;
   height: 20px;
@@ -31,7 +31,10 @@ svg{
 .record svg , .righticon svg{
   font-size:25px;
 }
-
+.searche{
+  border-radius: 25px;
+  border: 1px solid var(--border-color);
+}
 }
 @media (max-width:640px) {
   .header {
@@ -42,6 +45,11 @@ svg{
       background: none;
       border-left: none;
     }
+  }
+  .searchicone{
+    background: var(--grey);
+    border-left:1px solid var(--border-color);
+    height: 2.5rem;
   }
 }
 }

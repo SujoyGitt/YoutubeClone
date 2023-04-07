@@ -1,8 +1,26 @@
-export const Loginsucces = "Login_success"
-export const Loginfail = "Login_fail"
-export const LoginRequest = "Login_Request"
-export const Logout = "Logout"
-export const Loadprofile = "Loadprofile"
-export const HOME_VIDEOS_SUCCESS = "HOME_VIDEOS_SUCCESS"
-export const HOME_VIDEOS_FAIL = "HOME_VIDEOS_FAIL"
-export const HOME_VIDEOS_REQUEST = "HOME_VIDEOS_REQUEST"
+export const Loginsucces = "Login_success";
+export const Loginfail = "Login_fail";
+export const LoginRequest = "Login_Request";
+export const Logout = "Logout";
+export const Loadprofile = "Loadprofile";
+
+export const HOME_VIDEOS_SUCCESS = "HOME_VIDEOS_SUCCESS";
+export const HOME_VIDEOS_FAIL = "HOME_VIDEOS_FAIL";
+export const HOME_VIDEOS_REQUEST = "HOME_VIDEOS_REQUEST";
+
+export const VIDEOS_REQUEST_BY_IDSUCCESS = "HOME_VIDEOS_SUCCESS_BY_ID";
+export const VIDEOS_REQUEST_BY_IDFAIL = "HOME_VIDEOS_FAIL_BY_ID";
+export const VIDEOS_REQUEST_BY_IDREQUEST = "HOME_VIDEOS_REQUEST_BY_ID";
+
+export const CHANNEL_DETAILS_REQUEST = "CHANNEL_DETAILS_REQUEST";
+export const CHANNEL_DETAILS_SUCCESS = "CHANNEL_DETAILS_SUCCESS";
+export const CHANNEL_DETAILS_FAIL = "CHANNEL_DETAILS_FAIL";
+
+export const SET_SUBSCRIPTION_STATUS = "SET_SUBSCRIPTION_STATUS";
+
+export const COMMENT_LIST_REQUEST = "COMMENT_LIST_REQUEST"
+export const COMMENT_LIST_SUCCESS = "COMMENT_LIST_SUCCESS"
+export const COMMENT_LIST_FAIL = "COMMENT_LIST_FAIL"
+
+export const CREATE_COMMENT_SUCCESS = "CREATE_COMMENT_SUCCESS"
+export const CREATE_COMMENT_FAIL = "CREATE_COMMENT_FAIL"

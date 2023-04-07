@@ -22,7 +22,7 @@ export const Login = () => {
   
   return (
     <div className="login w-full h-screen relative">
-      <div className="logindata  text-center inline-block">
+      <div className="logindata  text-center w-full sm:inline-block sm:w-auto">
         <h2 className="text-3xl text-gray-600">Youtube Clone</h2>
         <img src={Loginimg} alt="loginimg" className="w-20 m-auto" />
         <button

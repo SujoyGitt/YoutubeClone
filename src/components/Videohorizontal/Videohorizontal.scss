@@ -1,0 +1,16 @@
+.videoHorizontal:nth-child(1){
+  margin-top: 0px;
+}
+.video_horialzontal_profile{
+  min-width: 180px;
+  min-height: 115px;
+}
+@media (max-width:992px) {
+  .videoHorizontal:nth-child(1){
+    margin-top: 20px;
+  }
+  .video_horialzontal_profile{
+    
+    height: 60px;
+  }
+}

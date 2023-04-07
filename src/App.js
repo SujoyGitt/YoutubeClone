@@ -6,6 +6,7 @@ import { Login } from "./components/screen/loginScreen/Login";
 import {  Route, Routes } from "react-router-dom";
 import {useSelector } from "react-redux";
 import {useNavigate} from "react-router-dom"
+import { WatchScreen } from "./components/screen/WatchScreen/WatchScreen";
 const Layout = ({ children }) => {
   let [hambargar, sethambarger] = useState(false);
   let hambargermenu = () => {
@@ -53,6 +54,14 @@ if (!accessToken && !loading) {
           element={
             <Layout>
               <h1 className="text-2xl mt-20">Search Result</h1>
+            </Layout>
+          }
+        />
+          <Route
+          path="/watch/:id"
+          element={
+            <Layout>
+              <WatchScreen/>
             </Layout>
           }
         />
