@@ -4,7 +4,7 @@ import Logo from "../img/YouTube_Logo.png";
 import MicIcon from "@material-ui/icons/Mic";
 import NotificationsNoneRoundedIcon from "@material-ui/icons/NotificationsNoneRounded";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 export const Header = ({ hambargermenu }) => {
   let [input, setInput] = useState("");
   let nevigate = useNavigate();
@@ -14,8 +14,6 @@ export const Header = ({ hambargermenu }) => {
     nevigate(`/search/${input}`);
     setInput("");
   };
- const {photo} = useSelector(state=>state.auth?.user)
- console.log(photo)
   // mobile search handle
   let [mobilesearch, setmobilesearch] = useState(false);
   let mobilesearchhandle = () => {
@@ -174,7 +172,7 @@ export const Header = ({ hambargermenu }) => {
         <span className="mx-6 hidden sm:block">
           <NotificationsNoneRoundedIcon />
         </span>
-        <div className="profile w-12 h-12 bg-grey rounded-full overflow-hidden"><img src={photo} className="w-full h-full object-cover" alt="" /></div>
+        <div className="profile w-12 h-12 bg-grey rounded-full overflow-hidden"><img src={''} className="w-full h-full object-cover" alt="" /></div>
       </div>
     </div>
   );

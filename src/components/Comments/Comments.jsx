@@ -75,7 +75,7 @@ export const Comments = ({ videoId, totalComments }) => {
       </div>
       <div className="comments_form w-full flex items-center ">
         <div className="comments_profile w-10 h-10 rounded-full bg-grey ">
-          <img src={photo} alt="" />
+          <img src={''} alt="" />
         </div>
         <form
           action=""
