@@ -31,7 +31,7 @@ export const Screen = () => {
   };
   return (
     <>
-      <div className="Screen w-full md:w-11/12 ">
+      <div className="Screen w-full md:w-11/12 ml-auto">
         <Category />
         <div className="video_container w-full flex flex-wrap mt-4 gap-5  justify-center">
           <InfiniteScroll
@@ -50,7 +50,7 @@ export const Screen = () => {
                   return <Video video={video} key={video.id+Math.random()} />;
                 })
               : [...Array(20)].map(() => {
-                  return <Skeletonvideo/>
+                  return <Skeletonvideo key={Math.random()}/>
                 })}
           </InfiniteScroll>
         </div>

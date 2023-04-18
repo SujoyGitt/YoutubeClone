@@ -7,6 +7,9 @@ import {  Route, Routes } from "react-router-dom";
 import {useSelector } from "react-redux";
 import {useNavigate} from "react-router-dom"
 import { WatchScreen } from "./components/screen/WatchScreen/WatchScreen";
+import { Searchscreen } from "./components/screen/Searchscreen";
+import { Subscription } from "./components/screen/Subscriptions/Subscription";
+import { ChannelScreen } from "./components/screen/ChannelScreen/ChannelScreen";
 const Layout = ({ children }) => {
   let [hambargar, sethambarger] = useState(false);
   let hambargermenu = () => {
@@ -37,40 +40,43 @@ if (!accessToken && !loading) {
 }
 },[accessToken,loading,navigate])
   return (
-    
-      <Routes>
+ <Routes>
         <Route
           path="/"
           exact
           element={
-            <Layout>
-              <Screen />
-            </Layout>
+            <Layout><Screen /></Layout>
           }
         />
         <Route path="/auth" element={<Login />} />
         <Route
-          path="/search"
+          path="/search/:query"
           element={
-            <Layout>
-              <h1 className="text-2xl mt-20">Search Result</h1>
-            </Layout>
+            <Layout><Searchscreen/></Layout>
           }
         />
           <Route
           path="/watch/:id"
           element={
-            <Layout>
-              <WatchScreen/>
-            </Layout>
+            <Layout><WatchScreen/></Layout>
+          }
+        /> 
+          <Route
+          path="/feed/subscriptions"
+          element={
+            <Layout><Subscription/></Layout>
+          }
+        />
+          <Route
+          path="/channel/:channelId"
+          element={
+            <Layout><ChannelScreen/></Layout>
           }
         />
         <Route
           path="*"
           element={
-            <Layout>
-              <Screen />
-            </Layout>
+            <Layout><Screen /></Layout>
           }
         />
       </Routes>

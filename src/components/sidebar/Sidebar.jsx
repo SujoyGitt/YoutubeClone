@@ -4,6 +4,7 @@ import "./Sidebar.scss";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { logout } from "../../redux/Actions/Auth_action";
 import { useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 export const Sidebar = ({ hambargermenu, hambargar }) => {
   const dispatch = useDispatch();
   let logouthandler = () => {
@@ -14,21 +15,22 @@ export const Sidebar = ({ hambargermenu, hambargar }) => {
       <div className="sidebar pl-1 fixed bg-white  left-0 bottom-0 h-32 w-full md:w-1/12 ">
         <ul className="text-center mt-2 md:mt-5 w-full flex justify-around items-center md:flex-col md:justify-start">
           <li>
-            <svg
-              viewBox="0 0 24 24"
-              preserveAspectRatio="xMidYMid meet"
-              focusable="false"
-              class="style-scope yt-icon w-6 h-6 mx-auto"
-            >
-              <g class="style-scope yt-icon">
-                <path
-                  d="M4,10V21h6V15h4v6h6V10L12,3Z"
-                  class="style-scope yt-icon"
-                ></path>
-              </g>
-            </svg>
-
-            <span className="block">Home</span>
+            <NavLink to="/">
+              <svg
+                viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
+                focusable="false"
+                class="style-scope yt-icon w-6 h-6 mx-auto"
+              >
+                <g class="style-scope yt-icon">
+                  <path
+                    d="M4,10V21h6V15h4v6h6V10L12,3Z"
+                    class="style-scope yt-icon"
+                  ></path>
+                </g>
+              </svg>
+              <span className="block">Home</span>
+            </NavLink>
           </li>
           <li>
             <svg
@@ -52,20 +54,22 @@ export const Sidebar = ({ hambargermenu, hambargar }) => {
             <span className="block">Shorts</span>
           </li>
           <li>
-            <svg
-              viewBox="0 0 24 24"
-              preserveAspectRatio="xMidYMid meet"
-              focusable="false"
-              class="style-scope yt-icon w-6 h-6 mx-auto"
-            >
-              <g class="style-scope yt-icon">
-                <path
-                  d="M20,7H4V6h16V7z M22,9v12H2V9H22z M15,15l-5-3v6L15,15z M17,3H7v1h10V3z"
-                  class="style-scope yt-icon"
-                ></path>
-              </g>
-            </svg>
-            <span className="block">Subscriptions</span>
+            <NavLink to="/feed/subscriptions">
+              <svg
+                viewBox="0 0 24 24"
+                preserveAspectRatio="xMidYMid meet"
+                focusable="false"
+                class="style-scope yt-icon w-6 h-6 mx-auto"
+              >
+                <g class="style-scope yt-icon">
+                  <path
+                    d="M20,7H4V6h16V7z M22,9v12H2V9H22z M15,15l-5-3v6L15,15z M17,3H7v1h10V3z"
+                    class="style-scope yt-icon"
+                  ></path>
+                </g>
+              </svg>
+              <span className="block">Subscriptions</span>
+            </NavLink>
           </li>
           <li>
             <svg
@@ -129,20 +133,22 @@ export const Sidebar = ({ hambargermenu, hambargar }) => {
           </div>
           <ul className="text-sm mt-4">
             <li className="flex  font-semibold justify-start items-center rounded-lg bg-grey p-2">
-              <svg
-                viewBox="0 0 24 24"
-                preserveAspectRatio="xMidYMid meet"
-                focusable="false"
-                class="style-scope yt-icon w-6 h-6 "
-              >
-                <g class="style-scope yt-icon">
-                  <path
-                    d="M4,10V21h6V15h4v6h6V10L12,3Z"
-                    class="style-scope yt-icon"
-                  ></path>
-                </g>
-              </svg>
-              <span className="ml-5">Home</span>
+              <NavLink to="/" className="flex justify-between items-center" onClick={hambargermenu}>
+                <svg
+                  viewBox="0 0 24 24"
+                  preserveAspectRatio="xMidYMid meet"
+                  focusable="false"
+                  class="style-scope yt-icon w-6 h-6 "
+                >
+                  <g class="style-scope yt-icon">
+                    <path
+                      d="M4,10V21h6V15h4v6h6V10L12,3Z"
+                      class="style-scope yt-icon"
+                    ></path>
+                  </g>
+                </svg>
+                <span className="ml-5">Home</span>
+              </NavLink>
             </li>
             <li className="flex justify-start items-center hover:rounded-lg hover:bg-grey hover:font-semibold p-2">
               <svg
@@ -166,6 +172,7 @@ export const Sidebar = ({ hambargermenu, hambargar }) => {
               <span className="ml-5">Shorts</span>
             </li>
             <li className="flex justify-start items-center hover:rounded-lg hover:bg-grey hover:font-semibold p-2">
+            <NavLink to="/feed/subscriptions" className="flex justify-between items-center" onClick={hambargermenu}>
               <svg
                 viewBox="0 0 24 24"
                 preserveAspectRatio="xMidYMid meet"
@@ -180,6 +187,7 @@ export const Sidebar = ({ hambargermenu, hambargar }) => {
                 </g>
               </svg>
               <span className="ml-5">Subcriptions</span>
+              </NavLink>
             </li>
             <hr className=" w-full bg-gray-300 mt-4 " />
           </ul>

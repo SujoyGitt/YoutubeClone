@@ -62,6 +62,9 @@ export const Category = () => {
     carousel.addEventListener("mouseup", function () {
       h = false;
     });
+    carousel.addEventListener("mouseleave", function () {
+      h = false;
+    });
   });
 
 

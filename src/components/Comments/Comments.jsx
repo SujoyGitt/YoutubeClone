@@ -16,7 +16,8 @@ export const Comments = ({ videoId, totalComments }) => {
   }, [videoId, dispatch]);
 
   const comments = useSelector((state) => state.CommentList.comments);
-
+  const {photo} = useSelector(state=>state.auth?.user)
+  console.log(photo)
   const _comments = comments
     ? comments.map((comment) => comment.snippet.topLevelComment.snippet)
     : [];
@@ -38,12 +39,7 @@ export const Comments = ({ videoId, totalComments }) => {
   };
   return (
     <div
-      className="comments w-full relative"
-      style={
-        !screen
-          ? { height: 50 + "px", overflow: "hidden" }
-          : { height: "auto", overflow: "auto" }
-      }
+      className={screen?"comments w-full  relative":"comments w-full relative h-14 overflow-hidden lg:overflow-auto lg:h-auto"}
     >
       <div
         className="absolute top-0  right-4 lg:hidden"
@@ -79,7 +75,7 @@ export const Comments = ({ videoId, totalComments }) => {
       </div>
       <div className="comments_form w-full flex items-center ">
         <div className="comments_profile w-10 h-10 rounded-full bg-grey ">
-          <img src="" alt="" />
+          <img src={photo} alt="" />
         </div>
         <form
           action=""
@@ -93,7 +89,7 @@ export const Comments = ({ videoId, totalComments }) => {
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
-          <button className="absolute  -bottom-12 right-0 text-sm p-1 px-2 bg-grey rounded-lg lg:hidden">
+          <button className="absolute -bottom-12 right-0 text-sm p-1 px-2 bg-grey rounded-lg lg:hidden">
             post
           </button>
         </form>

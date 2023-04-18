@@ -12,6 +12,7 @@
   width: 110px;
   height: 20px;
 }
+
 svg{
   cursor: pointer;
 }
@@ -27,7 +28,6 @@ svg{
     border-left:1px solid var(--border-color);
   }
 }
-
 .record svg , .righticon svg{
   font-size:25px;
 }

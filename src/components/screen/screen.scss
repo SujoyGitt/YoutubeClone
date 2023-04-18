@@ -1,3 +1,19 @@
 .Screen{
   margin-top: 70px;
+
+}
+
+@media (min-width:612px) {
+ .Screen{.horizontal_channel_name{
+    display: flex;
+    align-items: center;
+  }
+
+  .videoHorizontal{
+    border-bottom: .3px solid rgb(211, 211, 211);
+    margin: 0px 0px;
+    padding-bottom: 20px;
+  }
+  
+  }
 }

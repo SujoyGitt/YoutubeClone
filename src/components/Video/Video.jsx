@@ -17,6 +17,7 @@ export const Video = ({ video }) => {
       channelTitle,
       thumbnails: { medium },
     },
+    contentDetails
   } = video;
 
   const [views, setviews] = useState(null);
@@ -24,7 +25,7 @@ export const Video = ({ video }) => {
   const [channelicon, setchannelicon] = useState(null);
   const seconds = moment.duration(duration).asSeconds();
   const _duration = moment.utc(seconds * 1000).format("mm:ss");
-  let _videoId = id?.videoId || id;
+  let _videoId = id?.videoId || contentDetails?.videoId || id ;
   const getvideodetails = async () => {
     const {data: { items }} = await request("/videos", {
       params: {
