@@ -14,7 +14,7 @@ export const Header = ({ hambargermenu }) => {
     nevigate(`/search/${input}`);
     setInput("");
   };
-  // mobile search handle
+  // mobile search handle 
   let [mobilesearch, setmobilesearch] = useState(false);
   let mobilesearchhandle = () => {
     if (mobilesearch === false) {

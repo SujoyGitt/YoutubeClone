@@ -16,8 +16,6 @@ export const Comments = ({ videoId, totalComments }) => {
   }, [videoId, dispatch]);
 
   const comments = useSelector((state) => state.CommentList.comments);
-  const {photo} = useSelector(state=>state.auth?.user)
-  console.log(photo)
   const _comments = comments
     ? comments.map((comment) => comment.snippet.topLevelComment.snippet)
     : [];
