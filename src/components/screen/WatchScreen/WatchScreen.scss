@@ -1,0 +1,15 @@
+.watchscreen {
+  z-index: 2;
+  .watchscreen_player {
+    height: 60vh;
+    background: #353946;
+  }
+}
+@media (max-width: 567px) {
+  .watchscreen {
+    .watchscreen_player {
+      height: 40vh;
+      background: #353946;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.Category {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  white-space: nowrap;
+  overflow-x: scroll;
+  position: relative;
+  
+  &::-webkit-scrollbar {
+    height: 0px;
+  }
+  span {
+    padding: 7px 13px;
+    color: rgb(75, 75, 75);
+    background: #f2f2f2;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    &:hover {
+      background: var(--black-secondary);
+      color: whitesmoke;
+    }
+    &.active {
+      background: var(--black-secondary) ;
+      color: whitesmoke ;
+    }
+  }
+}
+

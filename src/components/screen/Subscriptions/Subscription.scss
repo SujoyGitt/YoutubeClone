@@ -1,0 +1,19 @@
+.subscription{
+  .videoHorizontal{
+    align-items: center;
+  }
+  .videoHorizontal .video_horialzontal_profile{
+    min-width: 200px !important;
+    max-width: 200px !important;
+    min-height:200px !important;
+    max-height:200px !important;
+    margin:  20px auto;
+  }
+  .horizontal_channel_name{
+    display: none;
+  }
+  .descripion_name {
+    display: block;
+  }
+ 
+}
